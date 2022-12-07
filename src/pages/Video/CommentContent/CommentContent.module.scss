@@ -1,0 +1,120 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    position: relative;
+    &:hover .action_container .action_icon {
+        display: block;
+    }
+    .tippy_avatar {
+        z-index: 100;
+    }
+    .user_avatar {
+        margin-right: 12px;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0px;
+        font-feature-settings: 'tnum';
+        position: relative;
+        overflow: hidden;
+        color: rgb(255, 255, 255);
+        white-space: nowrap;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 32px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        z-index: 10;
+        background-color: rgba(136, 136, 136, 0.5);
+    }
+    .content_container {
+        flex: 1 1 auto;
+        .user_text {
+            font-family: SofiaPro, Arial, Tahoma, PingFangSC, sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .comment_text {
+            font-size: 16px;
+            line-height: 22px;
+            white-space: pre-line;
+            word-break: break-word;
+            margin-bottom: 6px;
+        }
+        .sub_content {
+            color: rgba(22, 24, 35, 0.5);
+            font-size: 14px;
+            line-height: 20px;
+            span:nth-child(2) {
+                cursor: pointer;
+                color: rgba(22, 24, 35, 0.5);
+                font-weight: 400;
+                margin-left: 24px;
+            }
+        }
+    }
+    .action_container {
+        margin-left: 18px;
+        padding-right: 2px;
+        width: 24px;
+        flex: 0 0 24px;
+        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        .action_flag {
+            font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            padding: 0px 16px;
+            min-width: 200px;
+            min-height: 64px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            span {
+                margin-left: 12px;
+            }
+            &:hover {
+                color: rgb(254, 44, 85);
+            }
+        }
+        .action_icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            display: none;
+            position: absolute;
+            top: 0;
+            transform: rotate(90deg);
+        }
+        .action_like {
+            color: rgba(22, 24, 35, 0.5);
+            font-size: 12px;
+            line-height: 17px;
+            width: 20px;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-align: center;
+            align-items: center;
+            cursor: pointer;
+            .like-icon {
+                margin-bottom: 5px;
+            }
+            span {
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }
+    }
+}

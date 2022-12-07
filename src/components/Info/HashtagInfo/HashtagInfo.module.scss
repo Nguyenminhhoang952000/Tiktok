@@ -1,0 +1,41 @@
+.content {
+    font-size: 1.6rem;
+    line-height: 23px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .caption {
+        font-weight: 400;
+        margin-right: 4px;
+    }
+    .hashtag {
+        display: inline-block;
+        margin-right: 4px;
+        &:hover {
+            text-decoration: underline;
+        }
+        strong {
+            font-weight: 600;
+        }
+    }
+}
+.music {
+    font-size: 1.6rem;
+    line-height: 22px;
+    margin-top: 4px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    .music_note {
+        display: flex;
+    }
+    .music_icon {
+        margin-right: 5px;
+        font-size: 1.2rem;
+    }
+    .name_music {
+    }
+}
+.wrapper.hashtag_music .music {
+    margin-top: 10px;
+    margin-bottom: 16px;
+}

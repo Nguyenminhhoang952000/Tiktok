@@ -1,0 +1,61 @@
+.wrapper {
+    .title {
+        display: flex;
+        align-items: center;
+        &.info_video .text {
+            flex-direction: column;
+        }
+        &.info_video .name {
+            line-height: 2rem;
+        }
+        &.info_video .outline-btn {
+            padding: 6px 8px;
+            min-width: 106px;
+            right: 30px;
+            top: 28px;
+        }
+    }
+    .text {
+        display: flex;
+        &:hover .nickname {
+            text-decoration: underline;
+        }
+        .author {
+            display: flex;
+            align-items: center;
+            margin-right: 4px;
+            line-height: 25px;
+
+            .nickname {
+                font-size: 1.8rem;
+            }
+            .icon {
+                font-size: 1.4rem;
+                margin-left: 4px;
+                color: rgb(32, 213, 236);
+            }
+        }
+
+        .name {
+            font-weight: 400;
+            font-size: 14px;
+            display: inline-block;
+            line-height: 28px;
+        }
+    }
+    .outline-btn {
+        position: absolute;
+        right: 0;
+        top: 28px;
+        min-width: 88px;
+        padding: 0 10px;
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        min-height: 28px;
+        font-size: 1.6rem;
+        line-height: 22px;
+        font-weight: 600;
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,64 @@
+.wrapper {
+    padding: 20px 0 26px 8px;
+    margin-left: -20px;
+    width: 356px;
+    min-height: 1000px;
+    position: relative;
+    &.profile_container,
+    &.profile_container .sidebar_fixed {
+        width: 240px;
+    }
+    &.profile_container .scrollbar {
+        right: -4px;
+    }
+    .sidebar_fixed {
+        top: var(--default-layout-sidebar-height);
+        position: fixed;
+        width: 348px;
+        overflow-y: auto;
+        height: 100%;
+        overflow-x: hidden;
+        overscroll-behavior-y: contain;
+        perspective: 1px;
+        transform-style: preserve-3d;
+        perspective-origin: right top;
+        padding-bottom: 100px;
+        &::-webkit-scrollbar {
+            border-radius: 0;
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: transparent;
+            opacity: 0;
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 0;
+            background-color: rgba(0, 0, 0, 0);
+        }
+    }
+    .scrollbar {
+        height: 329.941px;
+        position: absolute;
+        padding: 0 4px;
+        top: 0;
+        transform-origin: right top;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        right: -2px;
+        display: flex;
+        transition: opacity 0.5s linear;
+        opacity: 0;
+        .thumb {
+            width: 6px;
+            height: 100%;
+            border-radius: 3px;
+            background: rgba(22, 24, 35, 0.06);
+        }
+    }
+    &:hover .scrollbar {
+        opacity: 1;
+    }
+}
